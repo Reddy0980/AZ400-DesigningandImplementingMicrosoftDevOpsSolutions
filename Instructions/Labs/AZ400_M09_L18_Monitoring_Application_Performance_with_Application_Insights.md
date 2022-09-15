@@ -168,14 +168,14 @@ az extension add -n appservice-kube
     --name AllowAzureResources --start-ip-address $STARTIP --end-ip-address $ENDIP
   
 
-11.  Now create a database within that server.
+12.  Now create a database within that server.
 
     
     az sql db create --server $SERVERNAME --resource-group $RESOURCEGROUPNAME --name PartsUnlimited \
     --service-objective S0
     
 
-12.  The web app you created needs the database connection string in its configuration, so run the following commands to prepare and add it to the app settings of the web app.
+13.  The web app you created needs the database connection string in its configuration, so run the following commands to prepare and add it to the app settings of the web app.
 
    
     CONNSTRING=$(az sql db show-connection-string --name PartsUnlimited --server $SERVERNAME \
